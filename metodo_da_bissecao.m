@@ -1,13 +1,13 @@
-% Método da Bisseção - Lucas Micol
-% Metodos numéricos computacionais
+% MÃ©todo da BisseÃ§Ã£o - Lucas Micol
+% Metodos numÃ©ricos computacionais
 
-% Limmpar variáveis e comandos
+% Limmpar variÃ¡veis e comandos
 clc;
 clear;
 format long;
 
-% Parámetros
-disp('Sua função: ');
+% ParÃ¡metros
+disp('Sua funÃ§Ã£o: ');
 f = input('', 's');
 
 disp('Limite inferior: ');
@@ -21,17 +21,17 @@ if(a > b)
     return
 end  
 
-disp('Precisão: ');
+disp('PrecisÃ£o: ');
 err = input('');
 
-disp('Máximo de Execuções: ');
+disp('MÃ¡ximo de ExecuÃ§Ãµes: ');
 lim = input('');
 
 fa = subs(f,a);
 fb = subs(f,b);
 
 
-% Execução
+% ExecuÃ§Ã£o
 
 if fa*fb < 0
     i_atual = 1;
@@ -49,7 +49,7 @@ if fa*fb < 0
         fprintf('f(a): %f | f(b): %f | x: %f | f(x): %f\n', fa, fb, x, fx);
         
         if (abs(fx) < err)
-            fprintf('Solução encontrada.');
+            fprintf('SoluÃ§Ã£o encontrada.');
             disp(x);
             return
         end
@@ -65,11 +65,11 @@ if fa*fb < 0
 else
     if fa*fb == 0
         if fa == 0
-            fprintf('O limite inferior é a solução');
+            fprintf('O limite inferior Ã© a soluÃ§Ã£o');
             disp(a);
             return;
         else
-            fprintf('O limite superior é a solução');
+            fprintf('O limite superior Ã© a soluÃ§Ã£o');
             disp(b);
             return;
         end
